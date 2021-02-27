@@ -22,6 +22,7 @@
   height: 4px;
   border-radius: 4px;
   background: var(--green);
+  width: 0;
 }
 
 /* text of current experience */
@@ -29,4 +30,5 @@ span.currentExperience {
   position: absolute;
   top: 12px;
   transform: translateX(-50%);
+  left: 0;
 }
