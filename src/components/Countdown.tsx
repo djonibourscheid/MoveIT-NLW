@@ -62,6 +62,18 @@ export function Countdown() {
               )}
           </>
         )}
-    </div>
+
+      { hasFinished ? (
+        <div className={styles.progressBarFinished}></div>
+      ) : (
+          <>
+            { isActive && (
+              <div className={styles.progressBar}>
+                <div></div>
+              </div>
+            )}
+          </>
+        )}
+    </div >
   );
 }

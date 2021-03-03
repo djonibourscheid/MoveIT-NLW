@@ -86,3 +86,39 @@
   color: var(--text);
   cursor: not-allowed;
 }
+
+
+.progressBar, .progressBarFinished {
+  height: 4px;
+  width: 25.875rem;
+  border-radius: 0 0 5px 5px;
+  position: absolute;
+  transform: translateY(-4px);
+}
+
+.progressBar {
+  background-color: var(--gray-line);
+}
+
+.progressBar > div {
+  content: '';
+
+  height: 4px;
+  border-radius: 0 0 5px 5px;
+  background-color: var(--green);
+  animation: progress 120s linear;
+}
+
+.progressBarFinished {
+  background-color: var(--green);
+}
+
+
+@keyframes progress {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
