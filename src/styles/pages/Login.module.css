@@ -1,0 +1,59 @@
+.container {
+  background-color: var(--blue);
+  width: 100vw;
+  height: 100vh;
+}
+
+.container > img {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translate(-4.25rem, -50%);
+  width: 48rem;
+  height: 41.25rem;
+}
+
+.container > section {
+  position: relative;
+  top: 50%;
+  left: 51.25%;
+  transform: translateY(-50%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  width: 26.25rem;
+  z-index: 5;
+}
+
+.sectionContainer > h1 {
+  color: #FFF;
+  font-weight: 600;
+  font-size: 2.25rem;
+  line-height: 2.87rem;
+
+  margin: 6rem 0 2rem;
+}
+
+.descriptionGithub {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  width: 19.875rem;
+  height: 3.75rem;
+  color: var(--text-highlight);
+}
+
+.descriptionGithub > img {
+  width: 2.5rem;
+}
+
+.descriptionGithub > p {
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+  width: 15.875rem;
+}
