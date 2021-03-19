@@ -1,5 +1,7 @@
 import Head from 'next/head';
 
+import { LoginButton } from '../components/LoginButton';
+
 import styles from '../styles/pages/Login.module.css';
 
 export default function Login() {
@@ -20,6 +22,8 @@ export default function Login() {
           <img src="/icons/github.svg" alt="Logo do Github" />
           <p>Faça login com seu Github para começar</p>
         </div>
+
+        <LoginButton />
       </section>
     </div>
   );
