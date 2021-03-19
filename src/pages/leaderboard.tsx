@@ -7,7 +7,7 @@ import styles from '../styles/pages/Leaderboard.module.css';
 export default function Leaderboard() {
   return (
     <div>
-      <SideBar page="leaderboard"/>
+      <SideBar page="leaderboard" />
 
       <div className={styles.container}>
         <Head>
