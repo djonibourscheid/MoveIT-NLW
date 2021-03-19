@@ -6,7 +6,7 @@ import styles from '../styles/components/ExperienceBar.module.css';
 
 export function ExperienceBar() {
   const [session] = useSession();
-  const firstLevelXPToNextLevel = 144;
+  const firstLevelXPToNextLevel = 64;
 
   const { currentExperience, experienceToNextLevel } = useContext(ChallengesContext);
 
