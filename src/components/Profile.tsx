@@ -24,6 +24,14 @@ export function Profile() {
         </>
       ) : (
         <>
+          <img src="https://octodex.github.com/images/inspectocat.jpg" />
+          <div className={styles.userInfos}>
+            <strong>Usuário conectado</strong>
+            <p>
+              <img src="icons/level.svg" alt="Level" />
+              Level 0
+            </p>
+          </div>
         </>
       )}
     </div>

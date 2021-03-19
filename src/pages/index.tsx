@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { GetServerSideProps } from 'next';
 
+import { NotLoggedModal } from '../components/NotLoggedModal';
 import { SideBar } from '../components/SideBar';
 import { ExperienceBar } from "../components/ExperienceBar";
 import { Profile } from "../components/Profile";
@@ -13,6 +14,7 @@ import styles from "../styles/pages/Home.module.css";
 import { CountdownProvider } from '../contexts/CountdownContext';
 import { ChallengesProvider } from '../contexts/ChallengesContext';
 
+import { useSession } from 'next-auth/client';
 
 interface HomeProps {
   level: number;
@@ -21,13 +23,19 @@ interface HomeProps {
 }
 
 export default function Home(props: HomeProps) {
+  const [session] = useSession();
+
   return (
     <ChallengesProvider
       level={props.level}
       currentExperience={props.currentExperience}
       challengesCompleted={props.challengesCompleted}
     >
-      <SideBar page="home"/>
+
+      {!session && <NotLoggedModal />}
+
+      <SideBar page="home" />
+
 
       <div className={styles.container}>
         <Head>
