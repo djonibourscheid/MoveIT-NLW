@@ -59,6 +59,12 @@ export function SideBar({ page }: SideBarProps) {
           </div>
         </div>
       )}
+
+      <Link href="/login">
+        <button className={styles.backToLogin}>
+          Voltar
+        </button>
+      </Link>
     </div>
   );
 }
