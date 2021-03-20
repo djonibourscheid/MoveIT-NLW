@@ -29,13 +29,18 @@
   height: 5rem;
 }
 
-.linkContainer div {
+.linkContainer button {
   height: 32px;
-  cursor: pointer;
+  width: 32px;
+  border: none;
+  background: none;
+  font-size: 0;
+  color: var(--text);
 }
 
-.linkContainer .active svg .iconPath {
-  stroke: var(--blue);
+.linkContainer .active svg g {
+  color: var(--blue);
+  opacity: 0.8;
 }
 
 .linkContainer .active::before {

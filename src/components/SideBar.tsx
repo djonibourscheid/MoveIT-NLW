@@ -1,5 +1,8 @@
 import Link from 'next/link';
 
+import SideBarHome from '../iconsComponent/SideBarHome';
+import SideBarLeaderboard from '../iconsComponent/SideBarLeaderboard';
+
 import styles from '../styles/components/SideBar.module.css';
 
 interface SideBarProps {
@@ -23,31 +26,39 @@ export function SideBar({ page }: SideBarProps) {
         <div className={`${styles.linkContainer}`}>
           <div className={styles.active}>
             <Link href="/">
-              <img src="/icons/sidebar-home.svg" alt="Página inicial" />
+              <button title="Ir para a página inicial">
+                <SideBarHome /> {/* SVG */}
+              </button>
             </Link>
           </div>
 
           <div>
             <Link href="/leaderboard">
-              <img src="/icons/sidebar-leaderboard.svg" alt="Página de Ranking" />
+              <button title="Ir para a página de ranking">
+                <SideBarLeaderboard /> {/* SVG */}
+              </button>
             </Link>
           </div>
         </div>
       ) : (
-          <div className={`${styles.linkContainer}`}>
-            <div>
-              <Link href="/">
-                <img src="/icons/sidebar-home.svg" alt="Página inicial" />
-              </Link>
-            </div>
-
-            <div className={styles.active}>
-              <Link href="/leaderboard">
-                <img src="/icons/sidebar-leaderboard.svg" alt="Página de Ranking" />
-              </Link>
-            </div>
+        <div className={`${styles.linkContainer}`}>
+          <div>
+            <Link href="/">
+              <button title="Ir para a página inicial">
+                <SideBarHome /> {/* SVG */}
+              </button>
+            </Link>
           </div>
-        )}
+
+          <div className={styles.active}>
+            <Link href="/leaderboard">
+              <button title="Ir para a página de ranking">
+                <SideBarLeaderboard /> {/* SVG */}
+              </button>
+            </Link>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
