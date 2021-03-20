@@ -58,8 +58,16 @@
   height: 56px;
   background-color: var(--blue);
   border-radius: 0 5px 5px 0;
-  transform: translateY(-10.5px); 
+  
+  transform: translateY(-10.5px);
 }
+.linkContainer .active.buttonHome::before {
+  animation: ToHome 1.1s ease;
+}
+.linkContainer .active.buttonLeaderboard::before {
+  animation: ToLeaderboard 1.1s ease;
+}
+
 
 .backToLogin {
   margin-bottom: 1.5rem;
@@ -69,4 +77,23 @@
   
   background-color: rgb(232, 63, 91, .9);
   color: white;
+}
+
+
+@keyframes ToHome {
+  0% {
+    transform: translateY(33.5px);
+  }
+  100% {
+    transform: translateY(-10.5px);
+  }
+}
+
+@keyframes ToLeaderboard {
+  0% {
+    transform: translateY(-54.5px);
+  }
+  100% {
+    transform: translateY(-10.5px);
+  }
 }

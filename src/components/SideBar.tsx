@@ -24,7 +24,7 @@ export function SideBar({ page }: SideBarProps) {
 
       { pageHomeActived ? (
         <div className={`${styles.linkContainer}`}>
-          <div className={styles.active}>
+          <div className={`${styles.active} ${styles.buttonHome}`}>
             <Link href="/">
               <button title="Ir para a página inicial">
                 <SideBarHome /> {/* SVG */}
@@ -50,7 +50,7 @@ export function SideBar({ page }: SideBarProps) {
             </Link>
           </div>
 
-          <div className={styles.active}>
+          <div className={`${styles.active} ${styles.buttonLeaderboard}`}>
             <Link href="/leaderboard">
               <button title="Ir para a página de ranking">
                 <SideBarLeaderboard /> {/* SVG */}
