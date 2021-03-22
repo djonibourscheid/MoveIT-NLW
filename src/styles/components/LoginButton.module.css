@@ -59,6 +59,11 @@
   border: none;
   border-radius: 0 5px 5px 0;
 }
+.singOut button:nth-child(2) svg {
+  color: #FFF;
+  width: 1.5rem;
+  height: 1.5rem;
+}
 
 .singOut button:nth-child(3) {
   font-size: 1rem;

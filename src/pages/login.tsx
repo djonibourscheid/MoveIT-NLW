@@ -1,6 +1,7 @@
 import Head from 'next/head';
 
 import { LoginButton } from '../components/LoginButton';
+import Github from '../iconsComponent/Github';
 
 import styles from '../styles/pages/Login.module.css';
 
@@ -19,7 +20,7 @@ export default function Login() {
         <h1>Bem-vindo</h1>
 
         <div className={styles.descriptionGithub}>
-          <img src="/icons/github.svg" alt="Logo do Github" />
+          <Github />
           <p>Faça login com seu Github para começar</p>
         </div>
 

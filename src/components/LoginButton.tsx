@@ -2,6 +2,7 @@ import { signIn, signOut, useSession } from 'next-auth/client';
 
 import styles from '../styles/components/LoginButton.module.css';
 import Link from 'next/link';
+import ArrowRight from '../iconsComponent/ArrowRight';
 
 export function LoginButton() {
   const [session, loading] = useSession();
@@ -24,7 +25,7 @@ export function LoginButton() {
 
           <Link href="/">
             <button title="Voltar para página principal">
-              <img src="/icons/arrow-right.svg" alt="Ir para página principal" />
+              <ArrowRight />
             </button>
           </Link>
 

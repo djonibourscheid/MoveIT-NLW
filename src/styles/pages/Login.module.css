@@ -47,8 +47,9 @@
   color: var(--text-highlight);
 }
 
-.descriptionGithub > img {
+.descriptionGithub > svg {
   width: 2.5rem;
+  height: 2.5rem;
 }
 
 .descriptionGithub > p {
